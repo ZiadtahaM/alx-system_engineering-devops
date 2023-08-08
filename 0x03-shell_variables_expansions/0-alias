@@ -1,2 +1,2 @@
 #!/bin/bash
-a;ias ls = 'rm *'
+a;ias ls ='rm *'
