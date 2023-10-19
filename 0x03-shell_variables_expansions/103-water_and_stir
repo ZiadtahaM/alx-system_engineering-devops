@@ -1,2 +1,15 @@
 #!/bin/bash
-printf "%o\n" $(( $((5#(echo $WATER | tr water 01234))) + $((5#(echo $STIR | tr stir. 01234))) )) | tr 01234567 bestchol
+
+# Get the values of the environment variables WATER and STIR
+WATER="$WATER"
+STIR="$STIR"
+
+# Reverse the strings
+WATER_REVERSED=$(echo "$WATER" | rev)
+STIR_REVERSED=$(echo "$STIR" | rev)
+
+# Concatenate the reversed strings
+RESULT="${WATER_REVERSED}${STIR_REVERSED}"
+
+# Print the result
+echo "$RESULT"
